@@ -1,0 +1,92 @@
+#gameBoard {
+    display: none;
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-template-rows: repeat(6, 80px);
+    gap: 5px;
+    background-color: #007bff;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+#gameContainer {
+    position: relative;
+    width: 610px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot {
+    width: 150px;
+    height: 20px;
+    background-color: #343a40;
+    border-radius: 10px;
+}
+
+.left-foot, .right-foot {
+    position: absolute;
+    bottom: -30px;
+}
+
+.left-foot {
+    left: 50px;
+}
+
+.right-foot {
+    right: 50px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #FFF3CD;
+    border: 2px solid #FFA500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: var(--current-player-color);
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

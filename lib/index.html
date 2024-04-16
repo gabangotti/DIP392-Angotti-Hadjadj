@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Puissance 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Puissance 4</h1>
+    <div id="gameContainer">
+        <div id="gameBoard"></div>
+        <div class="foot left-foot"></div> <!-- Pied gauche -->
+        <div class="foot right-foot"></div> <!-- Pied droit -->
+    </div>
+    
+    <div id="startModal" class="modal">
+        <div class="modal-content">
+            <h2>Bienvenue à Puissance 4</h2>
+            <button id="startButton">Commencer la partie</button>
+        </div>
+    </div>
+    
+    <div id="endModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2 id="winnerAnnouncement"></h2>
+            <button id="restartButton">Recommencer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
