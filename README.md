@@ -19,3 +19,8 @@ Welcome to the game of Connect Four. This game is played on a vertical board whe
 - JavaScript for game logic.
 
 We hope you enjoy playing Connect Four. Have fun!
+
+
+![Start a Game !](assets/start_game.jpg)
+![Start a Game !](assets/game.jpg)
+![Start a Game !](assets/game_end.jpg)
