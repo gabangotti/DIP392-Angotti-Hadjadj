@@ -1,24 +1,21 @@
-# DIP392-Angotti-Hadjadj
-DIP392-Angotti-Hadjadj
-
-# Puissance 4 - Guide de l'utilisateur
+# Connect Four - User Guide
 
 ## Introduction
-Bienvenue dans le jeu Puissance 4. Ce jeu se joue sur un plateau vertical où le but est de former une ligne continue de quatre jetons de la même couleur.
+Welcome to the game of Connect Four. This game is played on a vertical board where the goal is to form a continuous line of four tokens of the same color.
 
-## Comment jouer
-1. **Démarrer le jeu** : À l'ouverture de la page, un modal de démarrage apparaît avec un bouton "Commencer la partie". Cliquez sur ce bouton pour commencer à jouer.
-2. **Jouer un coup** : Cliquez sur une colonne du plateau pour déposer votre jeton. Le jeton tombera à la position la plus basse disponible dans la colonne choisie.
-3. **Changement de joueur** : Après chaque coup, le contrôle passe automatiquement à l'autre joueur.
-4. **Gagner la partie** : Le premier joueur à aligner quatre jetons verticalement, horizontalement ou en diagonale gagne la partie.
-5. **Fin de la partie** : Un modal s'affiche pour annoncer le gagnant et proposer de recommencer la partie via un bouton "Recommencer".
+## How to Play
+1. **Start the Game**: When the page opens, a startup modal appears with a "Start Game" button. Click this button to begin playing.
+2. **Make a Move**: Click on a column on the board to drop your token. The token will fall to the lowest available position in the chosen column.
+3. **Change of Player**: After each move, control automatically passes to the other player.
+4. **Winning the Game**: The first player to align four tokens vertically, horizontally, or diagonally wins the game.
+5. **End of the Game**: A modal appears to announce the winner and offers to restart the game via a "Restart" button.
 
-## Interaction avec le système
-- Le jeu est interactif et se joue entièrement à travers l'interface graphique fournie.
-- Les interactions se font par clics de souris sur les éléments interactifs comme les cellules du plateau de jeu et les boutons du modal.
+## Interaction with the System
+- The game is interactive and is played entirely through the provided graphical interface.
+- Interactions are made by mouse clicks on interactive elements such as the cells of the game board and the modal buttons.
 
-## Technologies utilisées
-- HTML/CSS pour la structure et le style.
-- JavaScript pour la logique du jeu.
+## Technologies Used
+- HTML/CSS for structure and style.
+- JavaScript for game logic.
 
-Nous espérons que vous apprécierez jouer à Puissance 4. Bon jeu !
+We hope you enjoy playing Connect Four. Have fun!
