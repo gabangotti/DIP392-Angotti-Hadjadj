@@ -1,92 +1,147 @@
-#gameBoard {
-    display: none;
-    display: grid;
-    grid-template-columns: repeat(7, 80px);
-    grid-template-rows: repeat(6, 80px);
-    gap: 5px;
-    background-color: #007bff;
-    padding: 10px;
-    position: relative;
-    z-index: 1;
-    border-radius: 30px;
-}
-
-#gameContainer {
-    position: relative;
-    width: 610px;
-    margin: 40px auto;
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
 }
 
-.foot {
-    width: 150px;
-    height: 20px;
-    background-color: #343a40;
-    border-radius: 10px;
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+    z-index: 1;
 }
 
-.left-foot, .right-foot {
+/* Animation de fond */
+body::before {
+    content: '';
     position: absolute;
-    bottom: -30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(30, 60, 114, 0.5), rgba(42, 82, 152, 0.5));
+    z-index: 0;
+    animation: moveBackground 10s linear infinite;
 }
 
-.left-foot {
-    left: 50px;
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
-.right-foot {
-    right: 50px;
+/* Conteneur du jeu */
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
+/* Plateau de jeu */
+#gameBoard {
+    display: grid;
+    grid-template-rows: repeat(6, 80px);
+    grid-template-columns: repeat(7, 80px);
+    gap: 5px;
+    background: #004d80;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Cellules du plateau */
 .cell {
     width: 80px;
     height: 80px;
-    background-color: #FFF3CD;
-    border: 2px solid #FFA500;
+    background: #0099cc;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
-    transition: background-color 0.3s;
+}
+
+.cell.red {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(153,0,0,1) 100%);
+}
+
+.cell.yellow {
+    background: radial-gradient(circle, rgba(255,255,0,1) 0%, rgba(204,204,0,1) 100%);
 }
 
 .cell:hover {
-    background-color: var(--current-player-color);
+    transform: scale(1.1);
 }
 
-.red {
-    background-color: red;
+/* Pieds du jeu */
+.foot {
+    width: 50px;
+    height: 50px;
+    background: #004d80;
+    margin-top: 10px;
+    z-index: 1;
 }
 
-.yellow {
-    background-color: yellow;
+.left-foot {
+    border-radius: 50% 0 0 50%;
 }
 
+.right-foot {
+    border-radius: 0 50% 50% 0;
+}
+
+/* Modales */
 .modal {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 2;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    background: #006bb3;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
+.modal-content h2 {
+    margin-top: 0;
+}
+
 button {
+    background: #0099cc;
+    color: #fff;
+    border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1em;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #007299;
 }
