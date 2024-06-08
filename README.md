@@ -1,5 +1,8 @@
 # Connect Four - User Guide
 
+## Report
+link : https://docs.google.com/document/d/1mS_JmLnx4bp1w9HzB7ZuDUZEzR5c6Lq70WwgPaxNEYs/edit?usp=sharing
+
 ## Introduction
 Welcome to the game of Connect Four. This game is played on a vertical board where the goal is to form a continuous line of four tokens of the same color.
 
